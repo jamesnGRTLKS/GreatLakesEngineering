@@ -12,7 +12,7 @@ class ProductTemplate(models.Model):
     @api.model
     def search(self, args, offset=0, limit=None, order=None, count=False):
         user = self.env['res.users'].browse(self.env.context.get('uid'))
-        if user.has_group('base.group_portal'):
+        if user.has_group('base.group_portal') or not user:
             partner = user.partner_id
             partners = [partner.id, partner.parent_id.id]
             args = args + ['|', ('customer_ids', '=', False), ('customer_ids', 'in', partners)]
