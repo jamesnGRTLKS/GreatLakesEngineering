@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'eCommerce Access Customization',
     'description': """
@@ -7,10 +5,14 @@
     - Set customers on product
     """,
     'category': 'Website',
-    'depends': ['website_sale'],
+    'version': '1.1.0',
+    'author': 'Odoo PS',
+    'depends': [
+        'website_sale'
+        ],
     'data': [
         'views/product_view.xml',
         ],
-    'license': 'OEEL-1',
+    'license': 'OPL-1',
     'installable': True,
 }
