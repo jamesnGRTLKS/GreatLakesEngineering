@@ -17,6 +17,5 @@ Great Lakes Engineering: Ecommerce select shipping method
     ],
     "data": [
         "views/res_partner_views.xml",
-        "views/sale_delivery_templates.xml",
     ],
 }

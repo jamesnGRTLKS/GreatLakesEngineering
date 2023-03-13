@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
-    <template id="gle_payment_delivery_methods" inherit_id="website_sale_delivery.payment_delivery_methods">
-        <xpath expr="//span[2]" position="replace"/>
-    </template>
-</odoo>
