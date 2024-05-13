@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="alternative_products" string="Alternative Products">
+                    <field name="alternative_line_ids" widget="one2many"
+                           context="{'default_product_id': id}">
+                        <tree string="Alternatives" editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="alternative_product_id"/>
+                            <field name="ratio"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
